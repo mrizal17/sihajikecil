@@ -1,52 +1,90 @@
 import Footer from "../../Components/Footer";
 import Navbar from "../../Components/Navbar";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+
 
 const Home = () => {
-    return (
-        <div>
-            <Navbar />
+  return (
+    <div className="bg-gray-100 min-h-screen">
+      <Navbar />
 
-            {/* hero section */}
-            <div className="border-b-black h-36 w-auto border mt-2 border-x-violet-600">
-                <img src="" alt="" />
-            </div>
-            {/* Menu Bawah */}
-            <div>
-                <div className="border border-black h-auto w-[395px] bg-[#78A083]">
-                    <h1 className="text-center text-3xl font-semibold text-white">e-Istitaah</h1>
-                    <p className="justify-center m-0.5">Surat keterangan istitaah kesehatan adalah surat keterangan
-                        mampu untuk berangkat haji berdasarkan penilaian kesehatan fisik dan mental.</p>
-                    <p>Hasil pemeriksaan kesehatan yang sudah diinput oleh tim penyelenggara kesehatan akan diolah dan dianalisis oleh Siskohatkes.
-                        Hasil analisis tersebut berupa penetapan status istitaah kesehatan jemaah haji.</p>
-                        <button></button>
-                </div>
-                <div className="border border-black h-auto w-[395px] bg-[#78A083]">
-                    <h1 className="text-center text-3xl font-semibold text-white">Surat Keterangan Vaksin</h1>
-                    <p className="justify-center m-0.5">Surat keterangan telah di lakukan vaksinasi sebagai syarat wajib keberangkatan haji.
-                        Vaksinasi yang di maksud adalah vaksinasi meningitis dan polio</p>
-                </div>
-                <div className="border border-black h-auto w-[395px] bg-[#78A083]">
-                    <h1 className="text-center text-3xl font-semibold text-white">Media Informasi</h1>
-                    <p className="justify-center m-0.5">Media informasi Kesehatan haji adalah segala bentuk saluran atau alat yang digunakan untuk mengumpulkan,
-                        mengolah, dan menyampaikan informasi kepada Calon Jemaah Haji</p>
-                </div>
-                <div className="border border-black h-auto w-[395px] bg-[#78A083]">
-                    <h1 className="text-center text-2xl font-semibold text-white">Hasil Pengukuran Kebugaran</h1>
-                    <p className="justify-center m-0.5">Hasil Pengukuran kebugaran Jemaah Haji adalah proses menilai tingkat kebugaran fisik Calon Jemaah Haji melalui berbagai tes dan evaluasi yang telah dilakukan oleh tim pemeriksa haji.
-                        Tujuannya adalah untuk mengetahui sejauh mana kemampuan tubuh dalam melakukan aktivitas sehari-hari,
-                        serta sebagai dasar untuk merancang program latihan yang sesuai untuk meningkatkan atau mempertahankan kebugaran.  </p>
-                </div>
-                <div className="border border-black h-auto w-[395px] bg-[#78A083]">
-                    <h1 className="text-center text-2xl font-semibold text-white">List Obat Bawaan Jemaah </h1>
-                    <p className="justify-center m-0.5">Surat keterangan yang menyatakan bahwa Jemaah Haji membawa obat-obatan tertentu untuk 
-                        mendampingi saat pelaksanaan ibadah haji </p>
-                </div>
-            </div>
-            <div>
+      {/* Hero Section */}
+<div className="w-full h-60 md:h-80 lg:h-[400px] mt-2">
+  <Swiper
+    modules={[Autoplay, Pagination]}
+    autoplay={{ delay: 3000, disableOnInteraction: false }}
+    loop={true}
+    pagination={{ clickable: true }}
+    className="w-full h-full"
+  >
+    <SwiperSlide>
+      <img src="/images/carousel/hero1.jpg" alt="Slide 1" className="w-full h-full object-cover" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="/images/carousel/hero2.jpg" alt="Slide 2" className="w-full h-full object-cover" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="/images/carousel/hero3.jpg" alt="Slide 3" className="w-full h-full object-cover" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="/images/carousel/hero4.jpg" alt="Slide 3" className="w-full h-full object-cover" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="/images/carousel/hero5.jpg" alt="Slide 3" className="w-full h-full object-cover" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="/images/carousel/hero6.jpg" alt="Slide 3" className="w-full h-full object-cover" />
+    </SwiperSlide>
+  </Swiper>
+</div>
 
-            </div>
-            <Footer />
+
+      {/* Konten */}
+      <div className="container mx-auto p-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+
+          {/* Card 1 */}
+          <div className="bg-[#78A083] p-4 rounded shadow text-white">
+            <h1 className="text-2xl font-bold text-center mb-2">e-Istitaah</h1>
+            <p>Surat keterangan istitaah kesehatan adalah surat keterangan mampu untuk berangkat haji berdasarkan penilaian kesehatan fisik dan mental.</p>
+            <p className="mt-2">Hasil pemeriksaan kesehatan yang sudah diinput oleh tim penyelenggara kesehatan akan diolah dan dianalisis oleh Siskohatkes.</p>
+            <p>Hasil analisis tersebut berupa penetapan status istitaah kesehatan jemaah haji.</p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-[#78A083] p-4 rounded shadow text-white">
+            <h1 className="text-2xl font-bold text-center mb-2">Surat Keterangan Vaksin</h1>
+            <p>Surat keterangan telah dilakukan vaksinasi sebagai syarat wajib keberangkatan haji. Vaksinasi yang dimaksud adalah vaksinasi meningitis dan polio.</p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-[#78A083] p-4 rounded shadow text-white">
+            <h1 className="text-2xl font-bold text-center mb-2">Media Informasi</h1>
+            <p>Media informasi Kesehatan haji adalah segala bentuk saluran atau alat yang digunakan untuk mengumpulkan, mengolah, dan menyampaikan informasi kepada Calon Jemaah Haji.</p>
+          </div>
+
+          {/* Card 4 */}
+          <div className="bg-[#78A083] p-4 rounded shadow text-white">
+            <h1 className="text-2xl font-bold text-center mb-2">Hasil Pengukuran Kebugaran</h1>
+            <p>Hasil pengukuran kebugaran Jemaah Haji adalah proses menilai tingkat kebugaran fisik melalui berbagai tes dan evaluasi.</p>
+            <p className="mt-2">Tujuannya untuk mengetahui kemampuan tubuh dan merancang program latihan yang sesuai.</p>
+          </div>
+
+          {/* Card 5 */}
+          <div className="bg-[#78A083] p-4 rounded shadow text-white">
+            <h1 className="text-2xl font-bold text-center mb-2">List Obat Bawaan Jemaah</h1>
+            <p>Surat keterangan yang menyatakan bahwa Jemaah Haji membawa obat-obatan tertentu untuk mendampingi saat pelaksanaan ibadah haji.</p>
+          </div>
+
         </div>
-    )
-}
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
 export default Home;
