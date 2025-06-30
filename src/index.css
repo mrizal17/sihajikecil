@@ -1,2 +1,3 @@
-@import "tailwindcss/preflight"; /* pengganti base */
-@import "tailwindcss/utilities"; /* gabungkan utilities + components */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
