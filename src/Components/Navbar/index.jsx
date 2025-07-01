@@ -9,20 +9,13 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Tampilkan "bayu" hanya di tampilan mobile */}
-     
-
+      {/* Tampilkan hanya di tampilan mobile */}
       <header className="bg-[#B6F500] text-black shadow-md px-4 py-3">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           {/* Logo */}
           <div className="flex items-center gap-4">
             <img src="/images/logo.png" alt="Logo" className="w-12 h-14" />
             <p className="text-xl font-bold">SiHajiKecil</p>
-          </div>
-
-          {/* Tampilkan "bayu" hanya di tampilan desktop */}
-          <div className="hidden md:block">
-            <h1 className="text-white">bayu</h1>
           </div>
 
           {/* Menu Desktop */}
